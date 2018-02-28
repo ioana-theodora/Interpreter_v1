@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by Toshiba on 28/02/2018.
  */
 
+//TODO What is the difference between Controller and RestController? (because they provide different output at runtime...)
 @Controller
 public class HomeController {
     private static final String appName = "Interpreter";
