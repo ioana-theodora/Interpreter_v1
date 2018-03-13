@@ -2,14 +2,12 @@ package com.Interpreter.SoftwareConstruction;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Toshiba on 28/02/2018.
  */
 
-//TODO What is the difference between Controller and RestController? (because they provide different output at runtime...)
 @Controller
 public class HomeController {
     private static final String appName = "Interpreter";
@@ -19,5 +17,10 @@ public class HomeController {
         model.addAttribute("name", name);
         model.addAttribute("title", appName);
         return "home";
+    }
+
+    @PostMapping("/")
+    public String greetingSubmit(@ModelAttribute Greeting greeting) {
+        return null; //TODO Change null when you know what the fuck you want!
     }
 }
